@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sptek.helloworld.SubActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Android SubActivity"
+        android:textSize="40sp"/>
+
+    <EditText
+        android:id="@+id/edittext"
+        android:layout_below="@id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Thirdactivity"
+        android:layout_below="@+id/text"
+        android:onClick="startThirdactivity"/>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CALL"
+        android:layout_below="@id/button1"
+        android:onClick="startCallactivity"/>
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WEB"
+        android:layout_below="@id/button2"
+        android:onClick="startWebactivity"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FINISH"
+        android:layout_below="@id/button3"
+        android:onClick="finishactivity"/>
+</android.support.constraint.ConstraintLayout>
