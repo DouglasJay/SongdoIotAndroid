@@ -17,24 +17,21 @@ public class ThirdActivity extends AppCompatActivity {
 
     public void clickButton1(View view) {
         Toast.makeText(ThirdActivity.this,
-        "This is Toast message",
+                "이것은 토스트 메시지입니다.",
                 Toast.LENGTH_SHORT).show();
     }
-
     public void clickButton2(View view) {
         AlertDialog.Builder dialog =
                 new AlertDialog.Builder(ThirdActivity.this);
         dialog.setTitle("알림");
-        dialog.setMessage("알림2");
+        dialog.setMessage("이것은 얼럿다이얼로그입니다.");
         dialog.setPositiveButton("닫기",
-            new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
 
-                }
-            });
+                    }
+                });
+        dialog.show();
     }
-
-    dialog.show();
-
 }
