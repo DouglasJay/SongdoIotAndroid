@@ -74,10 +74,13 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="click"/>
+            android:text="BUTTON1"
+            android:onClick="clickButton1"/>
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="back"/>
+            android:text="BUTTON2"
+            android:onClick="clickButton2"/>
     </LinearLayout>
 </LinearLayout>

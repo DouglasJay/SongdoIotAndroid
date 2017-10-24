@@ -27,6 +27,13 @@
         android:layout_below="@+id/text"
         android:onClick="startSubactivity"/>
 
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start ListViewActivity"
+        android:onClick="startListViewactivity"/>
+
 
 
 
