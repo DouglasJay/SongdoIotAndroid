@@ -38,22 +38,23 @@ public class MainActivity extends AppCompatActivity {
     public void startSubactivity(View view) {
         EditText editText =
                 (EditText)findViewById(R.id.edittext);
-
         Intent intent =
                 new Intent(MainActivity.this,
                         SubActivity.class);
-        intent.putExtra("edittext", editText.getText().toString());
+        intent.putExtra("edittext",
+                editText.getText().toString());
         //startActivity(intent);
         startActivityForResult(intent, 1);
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    protected void onActivityResult(
+            int requestCode, int resultCode, Intent data) {
         switch(requestCode) {
             case 1:
                 if (resultCode == RESULT_OK) {
                     String result =
-                    data.getStringExtra("edittext");
+                        data.getStringExtra("edittext");
                     EditText editText =
                             (EditText)findViewById(R.id.edittext);
                     editText.setText(result);

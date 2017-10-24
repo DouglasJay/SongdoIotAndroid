@@ -13,14 +13,14 @@ public class SubActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub);
-
+        ///////////////////////////////////////////////////
         Intent intent = getIntent();
         String edittext =
                 intent.getStringExtra("edittext");
         EditText editText =
                 (EditText)findViewById(R.id.edittext);
         editText.setText(edittext);
-
+        ////////////////////////////////////////////////////
     }
 
     public void finishActivity(View view) {
@@ -35,8 +35,8 @@ public class SubActivity extends AppCompatActivity {
 
     public void startThirdactivity(View view) {
         Intent intent = new Intent(
-                Intent.ACTION_CALL,
-                Uri.parse("tel:01012345678"));
+                SubActivity.this,
+                ThirdActivity.class);
         startActivity(intent);
     }
 
@@ -44,7 +44,11 @@ public class SubActivity extends AppCompatActivity {
         Intent intent = new Intent(
                 Intent.ACTION_CALL,
                 Uri.parse("tel:01012345678"));
-        startActivity(intent);
+        try {
+            startActivity(intent);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void startWebactivity(View view) {

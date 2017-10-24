@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -24,15 +24,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Start Thirdactivity"
-        android:layout_below="@+id/text"
         android:onClick="startThirdactivity"/>
     <Button
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="CALL"
+        android:onClick="startCallactivity"
         android:layout_below="@id/button1"
-        android:onClick="startCallactivity"/>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
     <Button
         android:id="@+id/button3"
         android:layout_width="match_parent"
@@ -47,4 +48,4 @@
         android:text="FINISH"
         android:layout_below="@id/button3"
         android:onClick="finishactivity"/>
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
