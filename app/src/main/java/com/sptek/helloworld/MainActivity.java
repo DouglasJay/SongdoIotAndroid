@@ -33,6 +33,14 @@ public class MainActivity extends AppCompatActivity {
                     new String[] { Manifest.permission.CALL_PHONE}, 1);
             }
         }
+
+        int permissionLocationCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION);
+        if (permissionLocationCheck != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[] {
+                    Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION
+            }, 2);
+
+        }
     }
 
     public void startSubactivity(View view) {
@@ -74,6 +82,29 @@ public class MainActivity extends AppCompatActivity {
                 DaumOpenAPIActivity.class);
         startActivity(intent);
     }
+
+    public void startGoogleMapActivity(View view) {
+        Intent intent = new Intent(
+                MainActivity.this,
+                GoogleMapActivity.class);
+        startActivity(intent);
+    }
+
+    public void startSQLiteDatabaseActivity(View view) {
+        Intent intent = new Intent(
+                MainActivity.this,
+                SQLiteDatabaseActivity.class);
+        startActivity(intent);
+    }
+
+    public void startSensorActivity(View view) {
+        Intent intent = new Intent(
+                MainActivity.this,
+                SensorActivity.class);
+        startActivity(intent);
+    }
+
+
 
     @Override
     protected void onActivityResult(
