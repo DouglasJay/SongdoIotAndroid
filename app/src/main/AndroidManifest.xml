@@ -35,11 +35,6 @@
             android:value="@integer/google_play_services_version" />
 
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".SubActivity" />
         <activity android:name=".ThirdActivity" />
@@ -50,7 +45,14 @@
         <activity android:name=".GoogleMapActivity" />
         <activity android:name=".SQLiteDatabaseActivity" />
         <activity android:name=".SensorActivity" />
-        <activity android:name=".SensorMonitorActivity"></activity>
+        <activity android:name=".SensorMonitorActivity" />
+        <activity android:name=".ArduinoActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
